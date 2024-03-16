@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100vw;
+  margin: 3px;
+}
+
+header,
+nav,
+main,
+footer {
+  display: flex;
+  margin: 0px;
+}
+
+header {
+  height: 100px;
+  flex: 1 1 100vw;
+}
+
+header #logo {
+  display: flex;
+  background: white;
+  justify-content: center;
+  align-items: center;
+}
+
+#openMenu,
+#closeMenu {
+  border: none;
+  background: none;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0px 5px 0px 5px;
+  cursor: pointer;
+  display: none;
+}
+
+nav {
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1 1 200px;
+  background: #007bff;
+  color: white;
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 3%;
+  font-size: 15pt;
+  color: white; 
+  text-decoration: none; 
+  transition: color 0.3s; 
+}
+
+nav a:hover {
+  color: #343a40; 
+}
+
+
+main {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 120px;
+}
+
+
+.personagens h1 {
+  
+  margin-left: 30px; 
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.fases h1{
+  margin-top: 90px;
+}
+.comoJogar h1{
+  margin-top: 90px;
+}
+
+.card {
+	margin-bottom: 70px;
+}
+
+
+.card-img-top {
+  max-width: 600px;
+  max-height: 300px;
+  display: block;
+  margin: auto;
+  margin-top: 55px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto; 
+  min-height: 100vh; 
+}
+
+
+
+footer {
+  height: 100px;
+  width: 100%; 
+  background-color: #343a40; 
+  color: #ffffff; 
+  padding: 20px 0;
+  z-index: 1; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.footer-content {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+@media only screen and (max-width: 717px) {
+  #openMenu,
+  #closeMenu {
+    display: block;
+  }
+
+  #openMenu {
+    margin-left: auto;
+  }
+
+  #closeMenu {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+  }
+
+  nav {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    display: none;
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  nav a {
+    margin: 3%;
+  }
+
+  main {
+    height: calc(100vh - 330px);
+  }
+
+ 
+}
